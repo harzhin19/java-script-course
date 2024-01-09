@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+
+  <body>
+    <p>youtoob soobscreb batton</p>
+    <button
+      onclick="
+
+    subscribe()
+
+"
+      class="js-subscribe-button"
+    >
+      soobscreb
+    </button>
+
+    <p>ama zone shitting calculator</p>
+    <input placeholder="cost of ORDEEERRR" class="js-cost-input" onkeydown="
+    handleCostKeydown(event)" />
+    <button
+      onclick="
+        calculateTotal();
+        "
+    >
+      calculate
+    </button>
+    <p class="js-total-cost"></p>
+    <script>
+      String(25)
+      console.log('25'-8)
+
+
+      function handleCostKeydown(event){
+        if(event.key==='Enter') {
+          calculateTotal();
+        }
+      }
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-cost-input");
+        let cost = Number(inputElement.value);
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+        document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+      }
+
+      function subscribe() {
+        const buttonElement = document.querySelector(".js-subscribe-button");
+        if (buttonElement.innerText === "soobscreb") {
+          buttonElement.innerHTML = "soobscrebed";
+        } else {
+          buttonElement.innerHTML = "soobscreb";
+        }
+      }
+    </script>
+  </body>
+</html>
